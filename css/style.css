@@ -1,0 +1,40 @@
+html, body, .my-main-container {
+    height:100%;
+}
+
+.my-content-row {
+    display:flex;
+    height:100%;
+}
+
+.my-content-col-1 {
+    padding: 20px;
+    flex-grow:1;
+}
+.my-content-col-2 {
+    width:30%;
+    background:#cccccc;
+}
+.my-header-logo img {
+    border-radius:15px;
+}
+
+.my-header-back-btn {
+    border:0;
+    font-weight:600;
+    gap:8px;
+    justify-content:space-between;
+    align-items:center;
+    display:inline-flex;
+    background:transparent;
+}
+
+
+.my-content-intro-title {
+    font-weight:700;
+    margin-bottom:0;
+}
+
+.my-content-intro-text {
+    margin-bottom:0;
+}
