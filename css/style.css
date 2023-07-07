@@ -13,6 +13,7 @@ html, body, .my-main-container {
 }
 .my-content-col-2 {
     width:30%;
+    flex-shrink:0;
     background:#cccccc;
 }
 .my-header-logo img {
@@ -38,3 +39,19 @@ html, body, .my-main-container {
 .my-content-intro-text {
     margin-bottom:0;
 }
+
+.my-prod-row {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.my-prod-col {
+    padding:5px;
+    width:50%;
+}
+
+.my-prod-card {
+    display:block;
+    background:#efefef;
+}
+
