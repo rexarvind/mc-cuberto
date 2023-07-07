@@ -122,10 +122,12 @@ html, body, .my-main-container {
     right:0;
     top:100%;
     position:fixed;
+    pointer-events:none;
 }
 .my-cart-sheet.active {
     top:0;
     bottom:0;
+    pointer-events:auto;
 }
 .my-cart-sheet .my-cart-sheet-overlay {
     display:block;
@@ -146,11 +148,18 @@ html, body, .my-main-container {
     height:0vh;
     position:absolute;
     background:#ffffff;
-    border-radius:7vw 7vw 0 0;
-    transition:all 400ms ease-in-out;
+    border-radius:0;
+    height:0vh;
+    transform:scale(0);
+    opacity:0;
+    transform-origin:bottom;
+    transition:transform 400ms ease-in-out, opacity 100ms ease-in-out, border-radius 400ms ease-in-out, height 300ms ease-in-out;
 }
 .my-cart-sheet.active .my-cart-sheet-container {
+    opacity:1;
     height:80vh;
+    transform:scale(1);
+    border-radius:7vw 7vw 0 0;
 }
 .my-cart-sheet-close-btn {
     border:0;
@@ -223,6 +232,37 @@ html, body, .my-main-container {
 
 .my-cart-sheet-qty-plus {
     border-color:#eddd00;
+    background:#eddd00;
+}
+
+.my-cart-sheet-actions {
+    margin-top: 5vw;
+    display:flex;
+    gap:8vw;
+    align-items:center;
+    justify-content:center;
+}
+
+.my-cart-sheet-action-btn-customise,
+.my-cart-sheet-action-btn-done {
+    min-width:20vw;
+    height:20vw;
+    color:#212121;
+    font-size:3.25vw;
+    font-weight:600;
+    line-height:1;
+    border-radius:7vw;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+}
+.my-cart-sheet-action-btn-customise:hover,
+.my-cart-sheet-action-btn-done:hover {
+    color:inherit;
+}
+
+.my-cart-sheet-action-btn-done {
     background:#eddd00;
 }
 /* cart sheet end */
