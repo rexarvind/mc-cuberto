@@ -21,13 +21,13 @@ html, body, .my-main-container {
 }
 
 .my-header-back-btn {
+    gap:8px;
     border:0;
     font-weight:600;
-    gap:8px;
-    justify-content:space-between;
     align-items:center;
     display:inline-flex;
     background:transparent;
+    justify-content:space-between;
 }
 
 
@@ -46,12 +46,28 @@ html, body, .my-main-container {
 }
 
 .my-prod-col {
-    padding:5px;
     width:50%;
+    padding:1.5vw;
 }
 
 .my-prod-card {
+    padding:5px;
     display:block;
+    height:100%;
+    color:#212121;
+    font-weight:600;
+    font-size:3.25vw;
+    text-align:center;
     background:#efefef;
+    border-radius:4vw;
+    text-decoration:none;
 }
 
+.my-prod-card:hover {
+    color:#ffffff;
+    background:#d90101;
+}
+
+.my-prod-card-img {
+    width:80%;
+}
