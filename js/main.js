@@ -1,4 +1,6 @@
 (function () {
+    var shopContainer = document.getElementById('my-shop-container');
+    var checkoutContainer = document.getElementById('my-checkout-container');
     var myProdCards = document.querySelectorAll('.my-prod-card');
     var prodSmallCards = document.querySelectorAll('.my-prod-card-small');
     var myCartSheet = document.getElementById('my-cart-sheet');
@@ -14,6 +16,8 @@
     var headerBackBtn = document.getElementById('my-header-back-btn');
     var contentIntro = document.getElementById('my-content-intro');
     var cartSheetActionBtnDone = document.getElementById('my-cart-sheet-action-btn-done');
+    var cartDoneBtn = document.getElementById('my-cart-done-btn');
+    var checkoutBackBtn = document.getElementById('my-checkout-back-btn');
 
 
     for (var i = 0; i < myProdCards.length; i++) {
@@ -92,6 +96,16 @@
 
     cartSheetActionBtnDone.addEventListener('click', function(){
         myCartSheet.classList.remove('active')
+    });
+
+    cartDoneBtn.addEventListener('click', function(){
+        shopContainer.classList.add('back-page');
+        checkoutContainer.classList.add('active');
+    });
+
+    checkoutBackBtn.addEventListener('click', function(){
+        shopContainer.classList.remove('back-page');
+        checkoutContainer.classList.remove('active');
     });
 
 

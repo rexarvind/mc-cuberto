@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="my-main-container">
+    <div id="my-shop-container" class="my-main-container">
         <div class="my-content-row">
             <div class="my-content-col my-content-col-1">
                 <div id="my-content-header" class="my-content-header">
@@ -142,12 +142,24 @@
 
             </div>
             <div class="my-content-col my-content-col-2">
-                <div class="my-flag-header">
-
-                </div>
+                <div class="my-flag-header"></div>
                 <div class="my-order-title-container">
                     <p class="my-order-title">My<br>Order</p>
                     <p class="my-order-subtext">Take Out</p>
+                </div>
+                <div class="my-content-col-2-box">
+
+
+
+
+
+                </div>
+                <div class="my-order-cart-btn-box">
+                    <p class="my-cart-total-title">Total</p>
+                    <p class="my-cart-total">$13.86</p>
+                    <a href="#!" id="my-cart-done-btn" class="my-cart-done-btn">
+                        Done
+                    </a>
                 </div>
             </div>
         </div>
@@ -266,6 +278,17 @@
             </div>
         </div>
     </div>
+
+
+    <div id="my-checkout-container" class="my-checkout-container">
+        <div class="my-checkout-header">
+            <a href="#!" id="my-checkout-back-btn" class="my-checkout-back-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" viewBox="0 0 320 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+                <span>Back</span>
+            </a>
+        </div>
+    </div>
+
     <script src="./js/main.js"></script>
 </body>
 </html>
