@@ -82,7 +82,7 @@ body::-webkit-scrollbar,
 
 .my-header-back-btn,
 .my-checkout-back-btn {
-    gap:1vw;
+    gap:2.5vw;
     border:0;
     font-size:4.5vw;
     height:8vh;
@@ -421,13 +421,16 @@ body::-webkit-scrollbar,
 }
 
 .my-cart-sheet-qty::-webkit-inner-spin-button,
-.my-cart-sheet-qty::-webkit-outer-spin-button {
+.my-cart-sheet-qty::-webkit-outer-spin-button,
+.my-checkout-prod-card-qty::-webkit-inner-spin-button,
+.my-checkout-prod-card-qty::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     margin: 0;
 }
-.my-cart-sheet-qty {
+.my-cart-sheet-qty,
+.my-checkout-prod-card-qty {
     -moz-appearance: textfield;
 }
 
@@ -612,7 +615,8 @@ body::-webkit-scrollbar,
 
 .my-checkout-logo {
     display:block;
-    width:28%;
+    width:25%;
+    border-radius:4vw;
     margin:2vw auto;
 }
 
@@ -622,7 +626,7 @@ body::-webkit-scrollbar,
 
 .my-checkout-title {
     color:#ffffff;
-    font-size:7.5vw;
+    font-size:7vw;
     font-weight:700;
     margin-top:5vw;
     line-height:1.25;
@@ -630,6 +634,7 @@ body::-webkit-scrollbar,
 
 .my-checkout-subtext {
     font-size:3.45vw;
+    margin-bottom:4vh;
     color:rgba(255,255,255,0.5);
 }
 
@@ -651,3 +656,76 @@ body::-webkit-scrollbar,
     font-weight:600;
 }
 
+.my-checkout-prod-card {
+    display:flex;
+    align-items:center;
+    padding:3vw 0;
+    border-bottom:1px solid rgba(0,0,0,0.15);
+}
+
+.my-checkout-prod-card:nth-child(1){
+    border-top:1px solid rgba(0,0,0,0.15);
+}
+
+.my-checkout-prod-card-img-col {
+    width:20%;
+}
+
+.my-checkout-prod-card-img {
+    width:75%;
+    padding:1.5vw;
+    border-radius:3vw;
+    background:#ffffff;
+}
+
+.my-checkout-prod-card-title {
+    font-size:3.5vw;
+    font-weight:600;
+    color:#ffffff;
+    margin-bottom:0;
+}
+
+.my-checkout-prod-card-text {
+    font-size:3vw;
+    color:rgba(255,255,255,0.5);
+}
+
+.my-checkout-prod-card-action-col {
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.my-checkout-prod-card-qty {
+    font-size:3.5vw;
+    outline:0;
+    border:0;
+    background:transparent;
+    color:#ffffff;
+    font-weight:600;
+    width:3ch;
+    text-align:center;
+}
+
+.my-checkout-prod-card-qty-minus,
+.my-checkout-prod-card-qty-plus {
+    outline:0;
+    line-height:1;
+    font-size:2.5vw;
+    border-radius:2vw;
+    border-width:1px;
+    border-style:solid;
+    border-color:rgba(255,255,255,0.5);
+    padding:1.25vw 2.5vw;
+}
+
+.my-checkout-prod-card-qty-minus {
+    background:transparent;
+    color:#ffffff;
+}
+
+.my-checkout-prod-card-qty-plus {
+    background:#ffffff;
+    color:#212121;
+}
