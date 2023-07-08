@@ -216,6 +216,7 @@ body::-webkit-scrollbar-thumb {
     margin-top:auto;
     line-height:1.5;
     margin-bottom:0;
+    color:#ffbc0d;
 }
 
 
@@ -244,26 +245,56 @@ body::-webkit-scrollbar-thumb {
     background:rgba(0,0,0,0.3);
     transition:background 200ms;
 }
+
 .my-cart-sheet .my-cart-sheet-container {
     left:0;
     right:0;
     bottom:0;
     height:0vh;
     position:absolute;
-    background:#ffffff;
     border-radius:0;
-    height:0vh;
     transform:scale(0);
+    height:80vh;
     opacity:0;
-    transform-origin:bottom;
-    transition:transform 400ms ease-in-out, opacity 100ms ease-in-out, border-radius 400ms ease-in-out, height 300ms ease-in-out;
+    overflow: hidden;
+    transform-origin:center;
+    transition:transform 300ms ease-in-out, opacity 100ms ease-in-out, border-radius 300ms ease-in-out;
 }
+
 .my-cart-sheet.active .my-cart-sheet-container {
     opacity:1;
-    height:80vh;
     transform:scale(1);
     border-radius:7vw 7vw 0 0;
 }
+
+.my-cart-sheet-container-bg-box {
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    pointer-events:none;
+}
+.my-cart-sheet-container-bg {
+    width:0;
+    height:0;
+    display:block;
+    border-radius:999vh;
+    background:transparent;
+    transition: all 450ms;
+    transition-delay:200ms;
+}
+.my-cart-sheet.active .my-cart-sheet-container-bg {
+    width:150vh;
+    height:150vh;
+    background:#ffffff;
+    z-index:-1;
+}
+
+
 .my-cart-sheet-close-btn {
     border:0;
     outline:0;
