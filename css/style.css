@@ -296,6 +296,13 @@ html, body, .my-main-container {
     display:flex;
     align-items:center;
     margin-bottom:3vw;
+    position:relative;
+    top: 15vw;
+    transition:all 200ms;
+}
+
+.my-cart-sheet-prod-custom-section.show .my-cart-sheet-prod-card {
+    top:0;
 }
 
 .my-cart-sheet-prod-card-img {
