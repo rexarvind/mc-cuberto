@@ -639,3 +639,15 @@ body::-webkit-scrollbar,
     justify-content:space-between;
 }
 
+.my-checkout-footer-title {
+    color:rgba(255,255,255,0.5);
+    font-size:3.5vw;
+    font-weight:500;
+}
+
+.my-checkout-footer-subtext {
+    font-size:5vw;
+    color:#ffffff;
+    font-weight:600;
+}
+
