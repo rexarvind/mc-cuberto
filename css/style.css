@@ -468,7 +468,8 @@ body::-webkit-scrollbar,
 .my-cart-sheet-action-btn-customise,
 .my-cart-sheet-action-btn-done,
 .my-cart-sheet-apply-btn,
-.my-cart-done-btn {
+.my-cart-done-btn,
+.my-checkout-btn {
     min-width:20vw;
     height:20vw;
     color:#212121;
@@ -484,13 +485,15 @@ body::-webkit-scrollbar,
 .my-cart-sheet-action-btn-customise:hover,
 .my-cart-sheet-action-btn-done:hover,
 .my-cart-sheet-apply-btn:hover,
-.my-cart-done-btn:hover {
+.my-cart-done-btn:hover,
+.my-checkout-btn:hover {
     color:inherit;
 }
 
 .my-cart-sheet-action-btn-done,
 .my-cart-sheet-apply-btn,
-.my-cart-done-btn {
+.my-cart-done-btn,
+.my-checkout-btn {
     background:#ffbc0d;
 }
 
@@ -591,7 +594,10 @@ body::-webkit-scrollbar,
     left:0;
     right:0;
     bottom:0;
+    opacity:0.5;
     position:fixed;
+    display:flex;
+    flex-direction:column;
     background:#236731;
     pointer-events:none;
     transition:all 400ms;
@@ -599,6 +605,37 @@ body::-webkit-scrollbar,
 }
 
 .my-checkout-container.active {
+    opacity:1;
     pointer-events:auto;
     clip-path: circle(95% at 50% 50%);
 }
+
+.my-checkout-logo {
+    display:block;
+    width:28%;
+    margin:2vw auto;
+}
+
+.my-checkout-actions {
+    margin-top:auto;
+}
+
+.my-checkout-title {
+    color:#ffffff;
+    font-size:7.5vw;
+    font-weight:700;
+    margin-top:5vw;
+    line-height:1.25;
+}
+
+.my-checkout-subtext {
+    font-size:3.45vw;
+    color:rgba(255,255,255,0.5);
+}
+
+.my-checkout-actions {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
