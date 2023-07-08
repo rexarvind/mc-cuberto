@@ -6,7 +6,8 @@
     var cartSheetCustomiseBtn = document.getElementById('my-cart-sheet-action-btn-customise');
     var cartSheetMainProdImg = document.getElementById('my-cart-sheet-main-prod-img');
     var cartSheetQtyBox = document.getElementById('my-cart-sheet-qty-box');
-
+    var cartSheetActions = document.getElementById('my-cart-sheet-actions');
+    var cartSheetProdCustomSection = document.getElementById('my-cart-sheet-prod-custom-section');
 
 
     for (var i = 0; i < myProdCards.length; i++) {
@@ -36,6 +37,8 @@
             cartSheetMainProdImg.classList.remove('shrink');
             cartSheetQtyBox.classList.remove('hide');
             cartSheetCloseBtn.classList.remove('back');
+            cartSheetActions.classList.remove('hide');
+            cartSheetProdCustomSection.classList.remove('show');
             return;
         }
         myCartSheet.classList.remove('active');
@@ -49,7 +52,9 @@
     cartSheetCustomiseBtn.addEventListener('click', function(){
         cartSheetMainProdImg.classList.add('shrink');
         cartSheetQtyBox.classList.add('hide');
+        cartSheetActions.classList.add('hide');
         cartSheetCloseBtn.classList.add('back');
+        cartSheetProdCustomSection.classList.add('show');
     });
 
 
