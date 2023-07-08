@@ -8,6 +8,7 @@
     var cartSheetQtyBox = document.getElementById('my-cart-sheet-qty-box');
     var cartSheetActions = document.getElementById('my-cart-sheet-actions');
     var cartSheetProdCustomSection = document.getElementById('my-cart-sheet-prod-custom-section');
+    var cartSheetApplyBtn = document.getElementById('my-cart-sheet-apply-btn');
 
 
     for (var i = 0; i < myProdCards.length; i++) {
@@ -32,17 +33,25 @@
         })
     }
 
+    function cancelCustomisation (){
+        cartSheetMainProdImg.classList.remove('shrink');
+        cartSheetQtyBox.classList.remove('hide');
+        cartSheetCloseBtn.classList.remove('back');
+        cartSheetActions.classList.remove('hide');
+        cartSheetProdCustomSection.classList.remove('show');
+    }
+
     cartSheetCloseBtn.addEventListener('click', function(){
         if(cartSheetCloseBtn.classList.contains('back')){
-            cartSheetMainProdImg.classList.remove('shrink');
-            cartSheetQtyBox.classList.remove('hide');
-            cartSheetCloseBtn.classList.remove('back');
-            cartSheetActions.classList.remove('hide');
-            cartSheetProdCustomSection.classList.remove('show');
+            cancelCustomisation();
             return;
         }
         myCartSheet.classList.remove('active');
     });
+
+    cartSheetApplyBtn.addEventListener('click', function(){
+        cancelCustomisation();
+    })
 
     myCartSheetOverlay.addEventListener('click', function(){
         myCartSheet.classList.remove('active');
