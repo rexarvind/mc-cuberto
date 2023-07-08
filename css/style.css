@@ -189,13 +189,33 @@ body::-webkit-scrollbar-thumb {
 }
 .my-prod-small-col {
     width:33.33%;
+    margin-bottom:3vw;
 }
 .my-prod-card-small {
     text-align:center;
     cursor:pointer;
+    display:flex;
+    align-items:center;
+    height:100%;
+    flex-direction:column;
 }
 .my-prod-card-small-img {
     width:70%;
+    margin-bottom:1vw;
+}
+.my-prod-card-small-title {
+    font-weight:700;
+    line-height:1.45;
+    font-size:2.75vw;
+    margin-bottom:1vw;
+    margin-top:0;
+}
+.my-prod-card-small-price {
+    font-size:3vw;
+    font-weight:700;
+    margin-top:auto;
+    line-height:1.5;
+    margin-bottom:0;
 }
 
 
