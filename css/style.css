@@ -29,7 +29,7 @@ body::-webkit-scrollbar-thumb {
 .my-content-col-2 {
     width:30%;
     flex-shrink:0;
-    background:#cccccc;
+    background:#f7f7f7;
 }
 .my-header-logo {
     display:block;
@@ -93,7 +93,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .my-content-intro-title {
-    font-weight:700;
+    font-weight:800;
     font-size:9vw;
     line-height:1;
     margin-bottom:0;
@@ -363,11 +363,11 @@ body::-webkit-scrollbar-thumb {
 .my-cart-sheet-qty-box {
     display:inline-flex;
     align-items:center;
+    opacity:1;
     transition:all 200ms;
 }
 .my-cart-sheet-qty-box.hide {
     opacity:0;
-    height:0;
 }
 .my-cart-sheet-qty {
     border:0;
