@@ -19,7 +19,7 @@
     var cartDoneBtn = document.getElementById('my-cart-done-btn');
     var checkoutBackBtn = document.getElementById('my-checkout-back-btn');
     var checkoutBtn = document.getElementById('my-checkout-btn');
-
+    var cartUpsell = document.getElementById('my-cart-upsell');
 
     for (var i = 0; i < myProdCards.length; i++) {
         myProdCards[i].addEventListener('click', function (e) {
@@ -68,6 +68,16 @@
         cartSheetCloseBtn.classList.remove('back');
         cartSheetActions.classList.remove('hide');
         cartSheetProdCustomSection.classList.remove('show');
+        cartUpsell.classList.remove('hide');
+    }
+
+    function startCustomisation(){
+        cartSheetMainProdImg.classList.add('shrink');
+        cartSheetQtyBox.classList.add('hide');
+        cartSheetActions.classList.add('hide');
+        cartSheetCloseBtn.classList.add('back');
+        cartSheetProdCustomSection.classList.add('show');
+        cartUpsell.classList.add('hide');
     }
 
     cartSheetCloseBtn.addEventListener('click', function(){
@@ -87,13 +97,7 @@
     });
 
 
-    cartSheetCustomiseBtn.addEventListener('click', function(){
-        cartSheetMainProdImg.classList.add('shrink');
-        cartSheetQtyBox.classList.add('hide');
-        cartSheetActions.classList.add('hide');
-        cartSheetCloseBtn.classList.add('back');
-        cartSheetProdCustomSection.classList.add('show');
-    });
+    cartSheetCustomiseBtn.addEventListener('click', startCustomisation);
 
     cartSheetActionBtnDone.addEventListener('click', function(){
         myCartSheet.classList.remove('active')
