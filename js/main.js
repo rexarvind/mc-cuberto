@@ -1,5 +1,6 @@
 (function () {
     var myProdCards = document.querySelectorAll('.my-prod-card');
+    var prodSmallCards = document.querySelectorAll('.my-prod-card-small');
     var myCartSheet = document.getElementById('my-cart-sheet');
     var cartSheetCloseBtn = document.getElementById('my-cart-sheet-close-btn');
     var myCartSheetOverlay = document.getElementById('my-cart-sheet-overlay');
@@ -9,6 +10,9 @@
     var cartSheetActions = document.getElementById('my-cart-sheet-actions');
     var cartSheetProdCustomSection = document.getElementById('my-cart-sheet-prod-custom-section');
     var cartSheetApplyBtn = document.getElementById('my-cart-sheet-apply-btn');
+    var contentHeader = document.getElementById('my-content-header');
+    var headerBackBtn = document.getElementById('my-header-back-btn');
+    var contentIntro = document.getElementById('my-content-intro');
 
 
     for (var i = 0; i < myProdCards.length; i++) {
@@ -27,11 +31,24 @@
                 el.classList.add('active');
             }
 
-            if(myCartSheet){
-                myCartSheet.classList.add('active');
-            }
+            contentHeader.classList.add('back');
+            contentIntro.classList.add('hide');
         })
     }
+
+    for (var i = 0; i < prodSmallCards.length; i++) {
+        prodSmallCards[i].addEventListener('click', function(){
+            myCartSheet.classList.add('active');
+        });
+    }
+
+    headerBackBtn.addEventListener('click', function(){
+        contentIntro.classList.remove('hide');
+        contentHeader.classList.remove('back');
+        for (var i = 0; i < myProdCards.length; i++) {
+            myProdCards[i].classList.remove('active');
+        }
+    });
 
     function cancelCustomisation (){
         cartSheetMainProdImg.classList.remove('shrink');
