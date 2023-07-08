@@ -180,6 +180,10 @@ html, body, .my-main-container {
     width:38%;
     margin-top:4vw;
     margin-bottom:4vw;
+    transition:all 200ms;
+}
+.my-cart-sheet-main-prod-img.shrink {
+    width:19%;
 }
 .my-cart-sheet-main-prod-title {
     font-size:6.5vw;
@@ -195,6 +199,11 @@ html, body, .my-main-container {
 .my-cart-sheet-qty-box {
     display:inline-flex;
     align-items:center;
+    transition:all 200ms;
+}
+.my-cart-sheet-qty-box.hide {
+    opacity:0;
+    height:0;
 }
 .my-cart-sheet-qty {
     border:0;
@@ -265,5 +274,17 @@ html, body, .my-main-container {
 .my-cart-sheet-action-btn-done {
     background:#eddd00;
 }
+
+.my-cart-sheet-products {
+    padding:2vw 5vw;
+}
+
+.my-cart-sheet-prod-card {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:2vw;
+}
+
 /* cart sheet end */
 
