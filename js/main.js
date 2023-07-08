@@ -13,6 +13,7 @@
     var contentHeader = document.getElementById('my-content-header');
     var headerBackBtn = document.getElementById('my-header-back-btn');
     var contentIntro = document.getElementById('my-content-intro');
+    var cartSheetActionBtnDone = document.getElementById('my-cart-sheet-action-btn-done');
 
 
     for (var i = 0; i < myProdCards.length; i++) {
@@ -81,6 +82,10 @@
         cartSheetActions.classList.add('hide');
         cartSheetCloseBtn.classList.add('back');
         cartSheetProdCustomSection.classList.add('show');
+    });
+
+    cartSheetActionBtnDone.addEventListener('click', function(){
+        myCartSheet.classList.remove('active')
     });
 
 
