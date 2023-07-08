@@ -2,6 +2,10 @@ html, body, .my-main-container {
     height:100%;
 }
 
+body {
+    overflow:hidden;
+}
+
 
 body::-webkit-scrollbar-track,
 .my-content-col-1::-webkit-scrollbar-track,
