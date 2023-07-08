@@ -202,6 +202,16 @@ body::-webkit-scrollbar-thumb {
 .my-prod-card-small-img {
     width:70%;
     margin-bottom:1vw;
+    position:relative;
+    left:0;
+    top:0;
+    opacity:1;
+    transition:all 200ms ease;
+}
+.my-prod-card-small-img.move-up {
+    left:20vw;
+    top:-50vw;
+    opacity:0;
 }
 .my-prod-card-small-title {
     font-weight:700;

@@ -39,6 +39,12 @@
 
     for (var i = 0; i < prodSmallCards.length; i++) {
         prodSmallCards[i].addEventListener('click', function(){
+            var el = this;
+            var img = el.querySelector('img');
+            img.classList.add('move-up');
+            setTimeout(function(){
+                img.classList.remove('move-up');
+            }, 500);
             myCartSheet.classList.add('active');
         });
     }
