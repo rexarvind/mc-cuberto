@@ -166,5 +166,26 @@
     }
 
 
+    var checkoutProdCardQtyMinus = document.querySelectorAll('.my-checkout-prod-card-qty-minus');
+    var checkoutProdCardQtyPlus = document.querySelectorAll('.my-checkout-prod-card-qty-plus');
+    for (var i = 0; i < checkoutProdCardQtyPlus.length; i++) {
+        checkoutProdCardQtyPlus[i].addEventListener('click', function(){
+            var input = this.previousElementSibling;
+            if(input){
+                input.value = parseInt(input.value) + 1;
+            }
+        });
+    }
+    for (var i = 0; i < checkoutProdCardQtyMinus.length; i++) {
+        checkoutProdCardQtyMinus[i].addEventListener('click', function(){
+            var input = this.nextElementSibling;
+            if(input){
+                if( parseInt(input.value) > 0 ){
+                    input.value = parseInt(input.value) - 1;
+                }
+            }
+        });
+    }
+
 
 })();
