@@ -188,4 +188,31 @@
     }
 
 
+    var cartSheetProdQtyMinus = document.querySelectorAll('.my-cart-sheet-prod-qty-minus');
+    var cartSheetProdQtyPlus = document.querySelectorAll('.my-cart-sheet-prod-qty-plus');
+    if(cartSheetProdQtyPlus){
+        for (var i = cartSheetProdQtyPlus.length - 1; i >= 0; i--) {
+            cartSheetProdQtyPlus[i].addEventListener('click', function(){
+                var input = this.previousElementSibling;
+                if(input){
+                    var suffix = input.getAttribute('data-input-suffix');
+                    input.value = (parseInt(input.value) + 1 ) + suffix;
+                }
+            });
+        }
+    }
+    if(cartSheetProdQtyMinus){
+        for (var i = 0; i < cartSheetProdQtyMinus.length; i++) {
+            cartSheetProdQtyMinus[i].addEventListener('click', function() {
+                var input = this.nextElementSibling;
+                if(input){
+                    if( parseInt(input.value) > 1 ){
+                        var suffix = input.getAttribute('data-input-suffix');
+                        input.value = (parseInt(input.value) - 1 ) + suffix;
+                    }
+                }
+            });
+        }
+    }
+
 })();
