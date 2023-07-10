@@ -727,6 +727,26 @@ body::-webkit-scrollbar,
 }
 
 
+.my-cart-sheet-prod-qty-simple-checkbox {
+    display:inline-block;
+    width:7vw;
+    height:5vw;
+    background-color:#f3fef3;
+    border-radius:2vw;
+    border:1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.my-cart-sheet-prod-qty-simple-checkbox:checked {
+    background-color:#ffbc0d;
+    border-color:#f3fef3;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23212121' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+
 .my-cart-upsell {
     position:absolute;
     bottom:5vw;
