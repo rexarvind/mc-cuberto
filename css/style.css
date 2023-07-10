@@ -726,6 +726,12 @@ body::-webkit-scrollbar,
   }
 }
 
+.my-cart-sheet-prod-custom-section-title {
+    text-align:left;
+    font-size:3.75vw;
+    color:#000000;
+    font-weight:700;
+}
 
 .my-cart-sheet-prod-qty-simple-checkbox {
     display:inline-block;
@@ -981,14 +987,26 @@ body::-webkit-scrollbar,
 
 .my-checkout-prod-card-text {
     font-size:3vw;
+    width:100%;
+    text-align: right;
     color:rgba(255,255,255,0.5);
+}
+
+.my-checkout-prod-card-prod-items {
+    font-size:3vw;
+    color:rgba(255,255,255,0.6);
 }
 
 .my-checkout-prod-card-action-col {
     margin-left:auto;
     display:flex;
     align-items:center;
+    flex-direction: column;
     justify-content:center;
+}
+
+.my-checkout-prod-card-action-col {
+    flex-shrink:0;
 }
 
 .my-checkout-prod-card-qty {
